@@ -3,11 +3,17 @@ package com.example.graduation_project_demo_backend.model;
 import jakarta.persistence.*;
 
 @Entity
+@Table(schema = "graduation")
 public class User {
 	@Id
 	@GeneratedValue(strategy = GenerationType.AUTO)
+	@Column(name = "userid", unique = true, nullable = false, length = 50)
 	private Integer uid;
+
+	@Column(name = "username", nullable = true, length = 50)
 	private String userName;
+	
+	@Column(name = "password", nullable = true, length = 50)
 	private String password;
 
 	public User() {
