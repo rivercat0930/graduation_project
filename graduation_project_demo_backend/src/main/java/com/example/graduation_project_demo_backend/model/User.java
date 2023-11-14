@@ -3,7 +3,7 @@ package com.example.graduation_project_demo_backend.model;
 import jakarta.persistence.*;
 // @Data
 @Entity
-@Table(schema = "graduation")
+@Table(name = "users")
 public class User {
 	@Id
 	@GeneratedValue(strategy = GenerationType.AUTO)
