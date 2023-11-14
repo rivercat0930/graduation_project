@@ -38,3 +38,10 @@ out/
 
 ### Database ###
 *.db
+
+### Cemotion ###
+.cemotion_cache/
+cemotion_2.0.pt
+
+### CSV ###
+output.csv
