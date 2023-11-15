@@ -16,7 +16,7 @@ public class SentimentAnaysisService {
 					"/Users/natsusaka/Desktop/graduation_project/graduation_project_demo_backend/for_recommend/user_location_reviews.py" };
 
 			ProcessBuilder processBuilder = new ProcessBuilder(command);
-			processBuilder.redirectErrorStream(true); // 將錯誤流合併到輸出流
+			processBuilder.redirectErrorStream(true);
 
 			Process process = processBuilder.start();
 			BufferedReader input = new BufferedReader(new InputStreamReader(process.getInputStream()));
