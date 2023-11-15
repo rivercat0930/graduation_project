@@ -10,8 +10,10 @@ c = Cemotion()
 location_mapping = {}
 
 # It's all file
-location_comment_folder = "location_comment"
+location_comment_folder = "./for_recommend/location_comment"
 files = os.listdir(location_comment_folder)
+
+print("DEBUG USING")
 
 
 # predict text sentiment score
@@ -21,13 +23,13 @@ def generate_scores(text):
 
 
 # create output file to save result
-with open("../src/main/resources/output.csv", "w", newline="") as csv_file:
+with open("./src/main/resources/output.csv", "w", newline="") as csv_file:
     fieldnames = ["UserId", "locationId", "locationName", "sentiment_score", "text"]
     writer = csv.DictWriter(csv_file, fieldnames=fieldnames)
     writer.writeheader()
 
     # classify locationId
-    with open("./location_comment/location.txt", "r") as location_file:
+    with open("./for_recommend/location_comment/location.txt", "r") as location_file:
         locations = location_file.read().splitlines()
         for i, location in enumerate(locations, start=1):
             # print(location)
@@ -49,7 +51,7 @@ with open("../src/main/resources/output.csv", "w", newline="") as csv_file:
                 # print(comments)
                 for comment in comments:
                     # print(comment)
-                    user_id = random.randint(1, 100)  # 随机生成1到100的userId
+                    user_id = random.randint(1, 100)  # 隨機生成1到100的userId
                     sentiment_score = generate_scores(comment)
 
                     # write into output file
