@@ -32,6 +32,11 @@ public class UserController {
 		return userService.getAllUsers();
 	}
 
+	@GetMapping("/{id}")
+	public ResponseEntity<User> getUser(@PathVariable Integer id) {
+		return ResponseEntity.ok().body(userService.getUserbyId(id));
+	}
+
 	@PostMapping("/new")
 	public String addUser(@RequestBody User user) {
 		try {
