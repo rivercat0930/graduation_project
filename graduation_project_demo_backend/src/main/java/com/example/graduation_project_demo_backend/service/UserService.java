@@ -9,8 +9,6 @@ import org.springframework.stereotype.Service;
 import com.example.graduation_project_demo_backend.model.User;
 import com.example.graduation_project_demo_backend.repo.UserRepo;
 
-import jakarta.transaction.Transactional;
-
 @Service
 public class UserService {
   @Autowired
@@ -29,6 +27,10 @@ public class UserService {
   public User newUser(User user) {
     userRepo.save(user);
     return user;
+  }
+
+  public User getUserByUserName(String userName) {
+    return userRepo.findByUserName(userName);
   }
 
   public void deleteUser(Integer id) {
