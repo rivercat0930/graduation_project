@@ -6,4 +6,5 @@ import java.util.List;
 
 public interface UserRepo extends JpaRepository<User, Integer> {
   // void deleteUserByUid(Integer id);
+  User findByUserName(String userName);
 }
