@@ -3,6 +3,7 @@ package com.example.graduation_project_demo_backend.controller;
 import java.util.List;
 
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.CrossOrigin;
 import org.springframework.web.bind.annotation.DeleteMapping;
@@ -44,6 +45,16 @@ public class UserController {
 			return "User added successfully!";
 		} catch (Exception e) {
 			return "Failed to add user: " + e.getMessage();
+		}
+	}
+
+	@PostMapping("/login")
+	public ResponseEntity<User> userLogin(@RequestBody User user) {
+		User newUser = userService.getUserByUserName(user.getUserName());
+		if (newUser != null) {
+			return ResponseEntity.ok().body(newUser);
+		} else {
+			return ResponseEntity.notFound().build();
 		}
 	}
 
