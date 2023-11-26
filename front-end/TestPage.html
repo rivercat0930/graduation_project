@@ -26,13 +26,17 @@
 				background-color: rgba(0, 0, 0, 0.3);
 				align-items: center;
 				justify-content: center;
+				overflow-y: initial !important
+
 			}
+
 			.my-modal {
 				background-color: #fff;
 				display: inline-block;
 				border-radius: 10px;
-				padding: 12px;
-				max-width: 700px;
+				padding: 2px;
+				max-height: calc(100vh - 250px);
+    			overflow-y: auto;
 			}
 			.btn {
 				background-color: #4c5c96;
@@ -46,9 +50,9 @@
 				color: #53639e;
 				display: inline-block;
 				border-radius: 10px;
-				padding: 5px;
-				max-width: 700px;
+				padding: 2px;
 			}
+
 		</style>
 	</head>
 	<body class="is-preload">
@@ -96,8 +100,8 @@
 								</button>
 							</p>
 							<div class="my-modal-container">
-								<div class="my-modal">
-									<p><br>你認為今天的情緒整體而言是?<br>
+								<div class="my-modal ">
+									<br><p>你認為今天的情緒整體而言是?</p><br>
 										<p class="col-4 col-12-small">
 											<input type="radio" id="Q1A1" name="Q1" >
 											<label for="Q1A1">偏向開心樂觀</label>
@@ -106,8 +110,8 @@
 											<input type="radio" id="Q1A3" name="Q1" >
 											<label for="Q1A3">沒有特別偏向的情緒</label>
 										</p>
-									
-										<p>下列哪個最能描述你今天的感受？</p><br>
+
+										<br><p>下列哪個最能描述你今天的感受？</p><br>
 										<p class="col-4 col-12-small">
 											<input type="radio" id="Q2A1" name="Q2" >
 											<label for="Q2A1">快樂滿足</label>
@@ -117,22 +121,22 @@
 											<label for="Q2A3">普通無特別感受</label>
 										</p>
 										
-										<p>今天你是否經歷了讓你感到煩惱或沮喪的事件？</p><br>
+										<br><p>今天你是否經歷了讓你感到煩惱或沮喪的事件？</p><br>
 										<p class="col-4 col-12-small">
 											<input type="radio" id="Q3A1" name="Q3" >
 											<label for="Q3A1">是</label>
 											<input type="radio" id="Q3A2" name="Q3" >
 											<label for="Q3A2">否</label>
 										</p>
-										
-										<p>有沒有什麼特別的事情在今天讓你感到驚喜或期待？</p><br>
+
+										<br><p>有沒有什麼特別的事情在今天讓你感到驚喜或期待？</p><br>
 										<p class="col-4 col-12-small">
 											<input type="radio" id="Q4A1" name="Q4" >
 											<label for="Q4A1">有</label>
 											<input type="radio" id="Q4A2" name="Q4" >
 											<label for="Q4A2">沒有</label>
 										</p>
-										<p>如果要用一個詞來形容今天的情緒，你會選擇?</p><br>
+										<br><p>如果要用一個詞來形容今天的情緒，你會選擇?</p><br>
 										<p class="col-4 col-12-small">
 											<input type="radio" id="Q5A1" name="Q5" >
 											<label for="Q5A1">平靜</label>
@@ -145,8 +149,8 @@
 											<input type="radio" id="Q5A5" name="Q5" >
 											<label for="Q5A5">沒感覺</label>
 											
-										</p>
-										</p>
+										</p><br>
+
 									<button data-close-modal class="btn">Submit</button>
 								</div>
 							</div>
