@@ -1,0 +1,280 @@
+<!DOCTYPE HTML>
+<!--
+	Solid State by HTML5 UP
+	html5up.net | @ajlkn
+	Free for personal and commercial use under the CCA 3.0 license (html5up.net/license)
+-->
+<html>
+	<head>
+		<title>情緒</title>
+		<meta charset="utf-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
+		<link rel="stylesheet" href="assets/css/main.css" />
+		<noscript>
+			<link rel="stylesheet" href="assets/css/noscript.css" />
+		</noscript>
+		<script src="https://cdn.staticfile.org/jquery/2.1.1/jquery.min.js"></script>
+		<script src="https://cdn.staticfile.org/twitter-bootstrap/3.3.7/js/bootstrap.min.js"></script>
+		<style>
+			.my-modal-container {
+				display: none;
+				width: 100vw;
+				height: 100vh;
+				position: fixed;
+				top: 0;
+				left: 0;
+				background-color: rgba(0, 0, 0, 0.3);
+				align-items: center;
+				justify-content: center;
+				overflow-y: initial !important
+
+			}
+
+			.my-modal {
+				background-color: #fff;
+				display: inline-block;
+				border-radius: 10px;
+				padding: 2px;
+				max-height: calc(100vh - 250px);
+    			overflow-y: auto;
+			}
+			.btn {
+				background-color: #4c5c96;
+				box-shadow: none;
+			}
+			.btn:hover {
+				background-color: #53639e;
+			}
+			p{
+
+				color: #53639e;
+				display: inline-block;
+				border-radius: 10px;
+				padding: 2px;
+			}
+
+		</style>
+	</head>
+	<body class="is-preload">
+
+		<!-- Page Wrapper -->
+			<div id="page-wrapper">
+
+				<!-- Header -->
+					<header id="header" class="alt">
+						<h1><a href="index.html"></a></h1>
+						<nav>
+
+							<a href="#menu">Menu</a>
+						</nav>
+					</header>
+
+				<!-- Menu -->
+				<nav id="menu">
+					<div class="inner">
+						<h2>Menu</h2>
+						<ul class="links">
+							<li><a href="index_after.html">Home</a></li>
+						</ul>
+						<a href="#" class="close">Close</a>
+					</div>
+				</nav>
+
+
+
+
+				<!-- Banner -->
+					<section id="banner">
+<!--						<div class="inner">-->
+<!--							<div class="logo"><span class="icon fa-gem"></span></div>-->
+
+<!--&lt;!&ndash;							<h2>歡迎來到推薦系統</h2>&ndash;&gt;-->
+<!--&lt;!&ndash;							<p>這是旨在幫助您做景點推薦的系統</p>&ndash;&gt;-->
+<!--						</div>-->
+						<!--		test				-->
+						<div class="inner">
+						<div class="logo"><span class="icon fa-gem"></span></div>
+							<p>
+								<button data-open-modal class="btn">
+									推薦適合你的景點
+								</button>
+							</p>
+							<div class="my-modal-container">
+								<div class="my-modal ">
+									<br><p>你認為今天的情緒整體而言是?</p><br>
+										<p class="col-4 col-12-small">
+											<input type="radio" id="Q1A1" name="Q1" >
+											<label for="Q1A1">偏向開心樂觀</label>
+											<input type="radio" id="Q1A2" name="Q1" >
+											<label for="Q1A2">偏向悲傷不開心</label>
+											<input type="radio" id="Q1A3" name="Q1" >
+											<label for="Q1A3">沒有特別偏向的情緒</label>
+										</p>
+
+										<br><p>下列哪個最能描述你今天的感受？</p><br>
+										<p class="col-4 col-12-small">
+											<input type="radio" id="Q2A1" name="Q2" >
+											<label for="Q2A1">快樂滿足</label>
+											<input type="radio" id="Q2A2" name="Q2" >
+											<label for="Q2A2">焦慮不安</label>
+											<input type="radio" id="Q2A3" name="Q2" >
+											<label for="Q2A3">普通無特別感受</label>
+										</p>
+										
+										<br><p>今天你是否經歷了讓你感到煩惱或沮喪的事件？</p><br>
+										<p class="col-4 col-12-small">
+											<input type="radio" id="Q3A1" name="Q3" >
+											<label for="Q3A1">是</label>
+											<input type="radio" id="Q3A2" name="Q3" >
+											<label for="Q3A2">否</label>
+										</p>
+
+										<br><p>有沒有什麼特別的事情在今天讓你感到驚喜或期待？</p><br>
+										<p class="col-4 col-12-small">
+											<input type="radio" id="Q4A1" name="Q4" >
+											<label for="Q4A1">有</label>
+											<input type="radio" id="Q4A2" name="Q4" >
+											<label for="Q4A2">沒有</label>
+										</p>
+										<br><p>如果要用一個詞來形容今天的情緒，你會選擇?</p><br>
+										<p class="col-4 col-12-small">
+											<input type="radio" id="Q5A1" name="Q5" >
+											<label for="Q5A1">平靜</label>
+											<input type="radio" id="Q5A2" name="Q5" >
+											<label for="Q5A2">愉快</label>
+											<input type="radio" id="Q5A3" name="Q5" >
+											<label for="Q5A3">不安</label>
+											<input type="radio" id="Q5A4" name="Q5" >
+											<label for="Q5A4">期待</label>
+											<input type="radio" id="Q5A5" name="Q5" >
+											<label for="Q5A5">沒感覺</label>
+											
+										</p><br>
+
+									<button data-close-modal class="btn">Submit</button>
+								</div>
+							</div>
+						</div>
+						<!--		test				-->
+					</section>
+
+<!--Hidden-->
+				<!-- Wrapper -->
+					<section id="wrapper">
+
+						<div id="hiddenElement" class="hidden">
+						<!-- Four -->
+							<section id="four" class="wrapper alt style1">
+								<div class="inner">
+									<h2 class="major">Vitae phasellus</h2>
+									<p>Cras mattis ante fermentum, malesuada neque vitae, eleifend erat. Phasellus non pulvinar erat. Fusce tincidunt, nisl eget mattis egestas, purus ipsum consequat orci, sit amet lobortis lorem lacus in tellus. Sed ac elementum arcu. Quisque placerat auctor laoreet.</p>
+									<section class="features">
+										<article>
+											<a href="#" class="image"><img src="images/pic04.jpg" alt="" /></a>
+											<h3 class="major">Sed feugiat lorem</h3>
+											<p>Lorem ipsum dolor sit amet, consectetur adipiscing vehicula id nulla dignissim dapibus ultrices.</p>
+											<a href="#" class="special">Learn more</a>
+										</article>
+										<article>
+											<a href="#" class="image"><img src="images/pic05.jpg" alt="" /></a>
+											<h3 class="major">Nisl placerat</h3>
+											<p>Lorem ipsum dolor sit amet, consectetur adipiscing vehicula id nulla dignissim dapibus ultrices.</p>
+											<a href="#" class="special">Learn more</a>
+										</article>
+										<article>
+											<a href="#" class="image"><img src="images/pic06.jpg" alt="" /></a>
+											<h3 class="major">Ante fermentum</h3>
+											<p>Lorem ipsum dolor sit amet, consectetur adipiscing vehicula id nulla dignissim dapibus ultrices.</p>
+											<a href="#" class="special">Learn more</a>
+										</article>
+										<article>
+											<a href="#" class="image"><img src="images/pic07.jpg" alt="" /></a>
+											<h3 class="major">Fusce consequat</h3>
+											<p>Lorem ipsum dolor sit amet, consectetur adipiscing vehicula id nulla dignissim dapibus ultrices.</p>
+											<a href="#" class="special">Learn more</a>
+										</article>
+									</section>
+									<ul class="actions">
+										<li><a href="#" class="button">Browse All</a></li>
+									</ul>
+								</div>
+							</section>
+						</div>
+					</section>
+
+				<!-- Footer -->
+			</div>
+
+
+		<!-- Scripts -->
+		<script>
+			const modal = document.querySelector('.my-modal-container');
+			const openBtn = document.querySelectorAll('*[data-open-modal]');
+			openBtn.forEach(node => {
+				node.addEventListener('click', () => {
+					fadeIn(modal, 'flex');
+					blockScroll();
+				});
+			});
+			const closeBtn = document.querySelectorAll('*[data-close-modal]');
+			closeBtn.forEach(node => {
+				node.addEventListener('click', () => {
+					fadeOut(modal);
+					unblockScroll();
+				});
+			});
+	
+			function fadeIn (el, display="inline-block", duration=400) {
+				el.style.opacity = el.style.opacity || 0;
+				el.style.display = display;
+				el.style.visibility = "visible";
+	
+				let opacity = parseFloat(el.style.opacity) || 0;
+				const timer = setInterval( function() {
+				opacity += 20 / duration;
+				if( opacity >= 1 ) {
+					clearInterval(timer);
+					opacity = 1;
+				}
+				el.style.opacity = opacity;
+				}, 20 );
+			}; 
+	
+			function fadeOut(el, duration=400) {
+				let opacity = 1;
+				const timer = setInterval( function() {
+				opacity -= 20 / duration;
+				if(opacity <= 0) {
+					clearInterval(timer);
+					opacity = 0;
+					el.style.display = "none";
+					el.style.visibility = "hidden";
+				}
+				el.style.opacity = opacity;
+				}, 20);
+			};
+	
+			function blockScroll() {
+				document.body.style.overflow = 'hidden';
+			}
+	
+			function unblockScroll() {
+				document.body.style.overflow = null;
+			}
+		</script>
+			<script src="assets/js/jquery.min.js"></script>
+			<script src="assets/js/jquery.scrollex.min.js"></script>
+			<script src="assets/js/browser.min.js"></script>
+			<script src="assets/js/breakpoints.min.js"></script>
+			<script src="assets/js/util.js"></script>
+			<script src="assets/js/main.js"></script>
+<!--test		-->
+			<script src="\assets\js\Sc.js"></script>
+			<script src="\assets\js\interact_page.js"></script>
+
+		<!--test		-->
+
+
+
+	</body>
+</html>

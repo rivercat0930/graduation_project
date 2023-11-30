@@ -10,7 +10,9 @@ c = Cemotion()
 location_mapping = {}
 
 # It's all file
-location_comment_folder = "./for_recommend/location_comment"
+# location_comment_folder = "./for_recommend/location_comment"
+location_comment_folder = "./src/main/resources/location_comment"
+
 files = os.listdir(location_comment_folder)
 
 print("DEBUG USING")

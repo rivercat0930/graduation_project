@@ -1,0 +1,105 @@
+<!DOCTYPE HTML>
+<!--
+	Solid State by HTML5 UP
+	html5up.net | @ajlkn
+	Free for personal and commercial use under the CCA 3.0 license (html5up.net/license)
+-->
+<html>
+	<head>
+		<title>FirstPage</title>
+		<meta charset="utf-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
+		<link rel="stylesheet" href="assets/css/main.css" />
+		<noscript><link rel="stylesheet" href="assets/css/noscript.css" /></noscript>
+	</head>
+	<body class="is-preload">
+
+		<!-- Page Wrapper -->
+			<div id="page-wrapper">
+
+				<!-- Header -->
+					<header id="header">
+						<h1><a href="index.html">Solid State</a></h1>
+						<nav>
+							<a href="#menu">Menu</a>
+						</nav>
+					</header>
+
+				<!-- Menu -->
+				<nav id="menu">
+					<div class="inner">
+						<h2>Menu</h2>
+						<ul class="links">
+							<li><a href="index.html">Home</a></li>
+							<li><a href="Log_In.html">Log In</a></li>
+						</ul>
+						<a href="#" class="close">Close</a>
+					</div>
+				</nav>
+
+				<!-- Wrapper -->
+				<br><br><br><br><br><br>
+				<!-- <h2>Login</h2>
+				<form action="http://localhost:8080/users/login" method="post"  th:object="${user}" th:action="@{http://localhost:8080/users/login}" th:method="post" th:enctype="application/json">
+					<label for="username">Username:</label>
+					<input type="text" id="username" name="username" th:field="*{userName}" required>
+					<br>
+					<label for="password">Password:</label>
+					<input type="password" id="password" name="password" th:field="*{password}" required>
+					<br>
+					<button type="submit">Login</button>
+				</form> -->
+				<h2>Login</h2>
+				<form action="http://localhost:8080/users/login" method="post"  th:object="${user}" th:action="@{http://localhost:8080/users/login}" th:method="post" enctype="application/x-www-form-urlencoded">
+					<label for="username">Username:</label>
+					<input type="text" id="username" name="username" required>
+					<br>
+					<label for="password">Password:</label>
+					<input type="password" id="password" name="password" required>
+					<br>
+					<button type="button" onclick="login()">Login</button>
+				</form>
+				<script>
+					function login() {
+							var username = document.getElementById('username').value;
+							var password = document.getElementById('password').value;
+			
+							var requestBody = {
+									"userName": username,
+									"password": password
+							};
+			
+							fetch('http://localhost:8080/users/login', {
+									method: 'POST',
+									headers: {
+											'Content-Type': 'application/json'
+									},
+									body: JSON.stringify(requestBody)
+							})
+							.then(response => response.json())
+							.then(data => {
+								console.log(data);
+								window.location.href = './TestPage.html'; // 修改為你想要跳轉的路徑
+							})
+							
+							.catch(error => console.error('Error:', error));
+					}
+			</script>
+
+
+
+				<!-- Footer -->
+
+
+			</div>
+
+		<!-- Scripts -->
+			<script src="assets/js/jquery.min.js"></script>
+			<script src="assets/js/jquery.scrollex.min.js"></script>
+			<script src="assets/js/browser.min.js"></script>
+			<script src="assets/js/breakpoints.min.js"></script>
+			<script src="assets/js/util.js"></script>
+			<script src="assets/js/main.js"></script>
+
+	</body>
+</html>
