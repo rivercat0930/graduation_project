@@ -49,8 +49,8 @@
 					<br>
 					<button type="submit">Login</button>
 				</form> -->
-				<h2>Login</h2>
-				<form action="http://localhost:8080/users/login" method="post"  th:object="${user}" th:action="@{http://localhost:8080/users/login}" th:method="post" enctype="application/x-www-form-urlencoded">
+				<h2 class="login_h2">Login</h2>
+				<form action="http://localhost:8080/users/login" method="post"  th:object="${user}" th:action="@{http://localhost:8080/users/login}" th:method="post" enctype="application/x-www-form-urlencoded" class="table">
 					<label for="username">Username:</label>
 					<input type="text" id="username" name="username" required>
 					<br>
